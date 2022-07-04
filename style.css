@@ -5,10 +5,8 @@ html {
     box-sizing: border-box;
 }
 
-/* font style */
-@font-face {
-    font-family: norse-bold;
-    src: url(../Sign-up-form-TOP/assets/fonts/Norse-Bold.otf);
+em {
+    font-style: italic;
 }
 
 
@@ -17,6 +15,10 @@ html {
     --logo-color: #596D48;
     --input-color: #E5E7EB;
     --input-color-error: red;
+    --form-padding: 50px;
+    --title-font-size: 36px;
+    --text-font-size: 24px;
+    --text-font-style: 'Montserrat', sans-serif;
 }
 /* Setting the height of the page using the parent div */
 div.container {
@@ -34,10 +36,13 @@ div.image {
     background-blend-mode: multiply;
     color: white;
 }
+/* form container */
 
 div.form-container {
-    padding: 10px;
-    flex: 0 1 1500px
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1500px;
+    
 }
 
 /* logo */
@@ -56,8 +61,89 @@ div.logo {
     aspect-ratio: 0.75/1;
     height: 140px;
 }
+.form-container > * {
+    flex: 1 1 100%;
+}
 
-.logo > p {
-    font-family: norse-bold, sans-serif;
-    font-size: 58px;
+.logo > p.logo-title {
+    font-family: var(--text-font-style);
+    font-size: 100px;
+}
+
+/* form container sections */
+.form-container > div.header {
+    font-weight: 550;
+    background-color: #F9FAFB;
+    padding-left: var(--form-padding);
+    padding-right: 400px;
+    padding-bottom: var(--form-padding);
+    padding-top: 150px;
+}
+
+[class^='information'] {
+    font-size: var(--title-font-size);
+    font-family: var(--text-font-style);
+    line-height: 2.5rem;
+}
+
+
+.form-container > div.form-section {
+    box-shadow: 8px 8px 5px lightgray;
+    z-index: 1;
+    padding: var(--form-padding);
+    padding-top: 10px;
+    font-family: var(--text-font-style);
+}
+
+.form-container > div.footer {
+    background-color: #F9FAFB;
+    padding: var(--form-padding);
+    padding-top: 0;
+    font-family: var(--text-font-style);
+}
+
+/* Form section */
+.form-section .form-title {
+    font-size: var(--title-font-size);
+}
+
+div.form-section form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 25px;
+}
+
+form .user-details > * {
+    flex: 0 1 500px;
+}
+
+/* input box */
+form .user-details .input-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-details .input-block .input {
+    height: 45px;
+    width: 355px;
+    padding: 10px;
+    font-size:var(--text-font-size);
+    border-radius: 4px;
+}
+
+/* footer section */
+div.footer > button {
+    font-size:var(--text-font-size);
+    color: white;
+    background-color: var(--logo-color);
+    padding: 10px 80px;
+    border-radius: 5px;
+    box-shadow: 2px 2px lightgray;
+    margin: 25px 0;
+}
+
+div.footer > p > a {
+    color: var(--logo-color);
 }

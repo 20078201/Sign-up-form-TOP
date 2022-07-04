@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat&family=Roboto:wght@300&display=swap" 
+    rel="stylesheet">
     <link rel="stylesheet" href="Reset-CSS.css">
     <link rel="stylesheet" href="style.css">
 
@@ -13,49 +18,51 @@
 <body>
     <div class="container">
         <div class="image">
-            
             <div class="logo">
                 <img src="assets/img/odin-lined.png" alt="The Odin Project logo">
-                <p>ODIN</p>
+                <p class="logo-title">ODIN</p>
             </div>
         </div>
         <div class="form-container">
             <div class="header">
-                <p>
+                <p class="information">
                     This is not a real online service! 
                     You know you need something like 
                     this in your life to help realise
-                    your deepest dreams. Sign up now
+                    your deepest dreams. Sign up <em>now</em>
                     to get started.
                 </p>
-                <p>You <em>know</em> you want to.</p>
+                <br>
+                <p class="information">You <em>know</em> you want to.</p>
             </div>
-            <div class="form">
+            <div class="form-section">
+                <div class="form-title">Let's do this!</div>
                 <form action="#" method="post">
-                    <p>Let's do this!</p>
-                    <div class="input-block">
-                        <label for="first_name">FIRST NAME</label>
-                        <input class="input" type="text" name="first_name" id="first_name">
-                    </div>
-                    <div class="input-block">
-                        <label for="last_name">LAST NAME</label>
-                        <input class="input" type="text" name="last_name" id="last_name">
-                    </div>
-                    <div class="input-block">
-                        <label for="email">EMAIL</label>
-                        <input class="input" type="email" name="user-email" id="email">
-                    </div>
-                    <div class="input-block">
-                        <label for="phone_number">PHONE NUMBER</label>
-                        <input class="input" type="text" name="user-phone-number" id="phone_number">
-                    </div>
-                    <div class="input-block">
-                        <label for="password">PASSWORD</label>
-                        <input class="input" type="password" name="user-password" id="password">
-                    </div>
-                    <div class="input-block">
-                        <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input class="input" type="password" name="user-confirm-password" id="confirm_password">
+                    <div class="user-details">
+                        <div class="input-block">
+                            <label class="detail" for="first_name">FIRST NAME</label>
+                            <input class="input" type="text" name="first_name" id="first_name">
+                        </div>
+                        <div class="input-block">
+                            <label class="detail" for="last_name">LAST NAME</label>
+                            <input class="input" type="text" name="last_name" id="last_name">
+                        </div>
+                        <div class="input-block">
+                            <label class="detail" for="email">EMAIL</label>
+                            <input class="input" type="email" name="user-email" id="email">
+                        </div>
+                        <div class="input-block">
+                            <label class="detail" for="phone_number">PHONE NUMBER</label>
+                            <input class="input" type="text" name="user-phone-number" id="phone_number">
+                        </div>
+                        <div class="input-block">
+                            <label class="detail" for="password">PASSWORD</label>
+                            <input class="input" type="password" name="user-password" id="password">
+                        </div>
+                        <div class="input-block">
+                            <label class="detail" for="confirm_password">CONFIRM PASSWORD</label>
+                            <input class="input" type="password" name="user-confirm-password" id="confirm_password">
+                        </div>
                     </div>
                 </form>
             </div>
