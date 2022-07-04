@@ -1,0 +1,63 @@
+/* Box sizing  */
+*, *::before, *::after { box-sizing: inherit;}
+
+html {
+    box-sizing: border-box;
+}
+
+/* font style */
+@font-face {
+    font-family: norse-bold;
+    src: url(../Sign-up-form-TOP/assets/fonts/Norse-Bold.otf);
+}
+
+
+/* Variables */
+:root {
+    --logo-color: #596D48;
+    --input-color: #E5E7EB;
+    --input-color-error: red;
+}
+/* Setting the height of the page using the parent div */
+div.container {
+    display: flex;
+    min-height: 100vh;
+    width: auto;
+}
+/* Container for the two columns */
+div.image {
+    flex: 1;
+    background-color: #95cde0;
+    background-image: url("assets/img/Halie_West_Unsplash_medium.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    color: white;
+}
+
+div.form-container {
+    padding: 10px;
+    flex: 0 1 1500px
+}
+
+/* logo */
+div.logo {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 150px;
+    margin-top: 220px;
+    padding: 5px;    
+}
+
+.logo > img {
+    aspect-ratio: 0.75/1;
+    height: 140px;
+}
+
+.logo > p {
+    font-family: norse-bold, sans-serif;
+    font-size: 58px;
+}
