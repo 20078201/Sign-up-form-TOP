@@ -76,8 +76,12 @@ div.logo {
     background-color: #F9FAFB;
     padding-left: var(--form-padding);
     padding-right: 400px;
-    padding-bottom: var(--form-padding);
-    padding-top: 150px;
+   
+}
+
+.header > .information-block {
+    padding: 75px 0;
+    margin-top: 50px;
 }
 
 [class^='information'] {
@@ -125,12 +129,18 @@ form .user-details .input-block {
     gap: 5px;
 }
 
-.user-details .input-block .input {
+.user-details .input-block .input, 
+[data-password="user_password"],
+[data-password="password_confirm"]{
     height: 45px;
     width: 355px;
     padding: 10px;
     font-size:var(--text-font-size);
     border-radius: 4px;
+}
+
+.input:focus {
+    box-shadow: 5px 5px lightgrey;
 }
 
 /* footer section */
@@ -144,6 +154,22 @@ div.footer > button {
     margin: 25px 0;
 }
 
-div.footer > p > a {
+a:link {
     color: var(--logo-color);
+}
+
+a:visited {
+    color: blue;
+}
+
+.error-msg::after {
+    content: '* Passwords do not match';
+    color: red;
+    font-size: 16px;
+}
+
+.pass-msg::after {
+    content: '* Passwords match';
+    color: rgb(12, 223, 12);
+    font-size: 16px;
 }

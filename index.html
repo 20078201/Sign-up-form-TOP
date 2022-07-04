@@ -12,6 +12,7 @@
     rel="stylesheet">
     <link rel="stylesheet" href="Reset-CSS.css">
     <link rel="stylesheet" href="style.css">
+    <script src="assets/js/main.js" defer></script>
 
     <title>Sign Up</title>
 </head>
@@ -25,15 +26,17 @@
         </div>
         <div class="form-container">
             <div class="header">
-                <p class="information">
-                    This is not a real online service! 
-                    You know you need something like 
-                    this in your life to help realise
-                    your deepest dreams. Sign up <em>now</em>
-                    to get started.
-                </p>
-                <br>
-                <p class="information">You <em>know</em> you want to.</p>
+                <div class="information-block">
+                    <p class="information">
+                        This is not a real online service!
+                        You know you need something like
+                        this in your life to help realise
+                        your deepest dreams. Sign up <em>now</em>
+                        to get started.
+                    </p>
+                    <br>
+                    <p class="information">You <em>know</em> you want to.</p>
+                </div>
             </div>
             <div class="form-section">
                 <div class="form-title">Let's do this!</div>
@@ -55,19 +58,19 @@
                             <label class="detail" for="phone_number">PHONE NUMBER</label>
                             <input class="input" type="text" name="user-phone-number" id="phone_number">
                         </div>
-                        <div class="input-block">
+                        <div data-validate="error" class="input-block">
                             <label class="detail" for="password">PASSWORD</label>
-                            <input class="input" type="password" name="user-password" id="password">
+                            <input data-password="user_password" type="password" name="user-password" id="password">
                         </div>
                         <div class="input-block">
                             <label class="detail" for="confirm_password">CONFIRM PASSWORD</label>
-                            <input class="input" type="password" name="user-confirm-password" id="confirm_password">
+                            <input data-password="password_confirm" type="password" name="user-confirm-password" id="confirm_password">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="footer">
-                <button type="submit">Create Account</button>
+                <button type="submit" data-button="form">Create Account</button>
                 <p>Already have an account? <a href="#">Log in</a></p>
             </div>
 
